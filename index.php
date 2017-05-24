@@ -15,14 +15,18 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <div class="edit-pic1">
-            <img src="" id='pic' height="150px" width="150px" >
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <img src="" id='pic' height="150px" width="150px" >
             <img src="images/loading.gif" id='loader' style="display: none;">
+            <input type="hidden" id="upload-disPic1" name="pic" value="">
+            <a href="javascript:void(0);" class="loader-bottom-action" onClick="callme('upload-disPic1', '640', '640', 'pic', 'add', 'loader', '1')">
+            <input type="button" value="Add Profile" class="btn btn-blue"></a>
+            </div>
+            
 
         </div>
-        <input type="hidden" id="upload-disPic1" name="pic" value="">
-        <a href="javascript:void(0);" class="loader-bottom-action" onClick="callme('upload-disPic1', '640', '640', 'pic', 'add', 'loader', '1')">
-            <input type="button" value="Add Profile" class="btn btn-blue"></a>
+        
             <?php require_once 'cropper_model.php'; ?>
         <script src="js/jquery-2.1.1.js"></script>
         <script src="js/bootstrap.min.js"></script>
